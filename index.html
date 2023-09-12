@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PracticeJQuery</title>
+  <link rel="stylesheet" href="hover.css">
+  <link rel="stylesheet" href="style.css">
+  <script
+  src="https://code.jquery.com/jquery-3.7.1.js"
+  integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+  crossorigin="anonymous"></script>
+</head>
+<body>
+  <h1>
+    Practice jQuery
+  </h1>
+
+  <button id="checkJ">check jQuery</button>
+  <input placeholder="Saying anything" type="text" id="inputText">
+  <div class="buttonFrame">
+    <button id="inputCheck">new ment input</button>
+    <button id="mentChange1">add ment front</button>
+    <button id="mentChange">add ment back</button>
+    <button id="repeat">10 repeat ment </button>
+  </div>
+
+<!--  -->
+<h5>by kimyeonwoo</h5>
+
+<script>
+  // variable declare!
+
+  // const inputValue= $("#inputText").val();
+  let inputValue = document.querySelector('#inputText').value;
+
+    $("#checkJ").click(function(){
+    alert('jQuery is okay!');
+    })
+
+    $("#inputCheck").click(function(){
+      const inputValue= $("#inputText").val();
+      $("h1").text(inputValue);
+    })
+
+    $("#mentChange").click(function(){
+      inputValue = document.querySelector('#inputText').value;
+      $("h1").append(inputValue);
+    })
+
+
+    $("#mentChange1").click(function(){
+      inputValue = document.querySelector('#inputText').value;
+      $("h1").prepend(inputValue);
+    })
+
+    $("#repeat").click(function(){
+      inputValue = document.querySelector('#inputText').value;
+      for(let i=0; i<10; i++){
+      $("h1").append(inputValue);
+      }
+    })
+
+
+  </script>
+</body>
+</html>
